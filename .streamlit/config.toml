@@ -1,0 +1,20 @@
+# Streamlit server / theme configuration.
+# Safe to commit — contains no secrets.
+
+[server]
+headless = true
+# Don't auto-collect usage stats in a deployed service.
+gatherUsageStats = false
+# Guard against very large pasted inputs.
+maxUploadSize = 5
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "dark"
+primaryColor = "#ff8c32"
+backgroundColor = "#0a0a0f"
+secondaryBackgroundColor = "#15151f"
+textColor = "#e8e4dc"
+font = "sans serif"

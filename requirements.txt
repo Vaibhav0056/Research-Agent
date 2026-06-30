@@ -1,0 +1,39 @@
+# ResearchMind — pinned dependencies
+#
+# Pins use the compatible-release operator (~=) so you get bug-fix updates
+# but not breaking minor/major bumps. This keeps Streamlit Community Cloud
+# builds reproducible.
+#
+# IMPORTANT: `langchain.agents.create_agent` is the LangChain 1.x API.
+# After testing locally, regenerate an EXACT lock from your working venv:
+#     pip freeze > requirements.lock.txt
+# and deploy with that for byte-for-byte reproducibility.
+
+# ── Core LLM + LangChain (1.x — provides create_agent) ──
+langchain~=1.0
+langchain-core~=1.0
+langchain-openai~=1.0
+openai~=2.2
+
+# ── Web search ──
+tavily-python~=0.5
+
+# ── Web scraping ──
+beautifulsoup4~=4.12
+requests~=2.32
+lxml~=5.3
+
+# ── UI ──
+streamlit~=1.40
+
+# ── Config / env ──
+python-dotenv~=1.0
+
+# ── Robustness ──
+tenacity~=9.0
+
+# ── Validation ──
+pydantic~=2.9
+
+# ── Dev / test (optional; safe to keep) ──
+pytest~=8.3
